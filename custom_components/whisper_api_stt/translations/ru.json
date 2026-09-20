@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Whisper.cpp API STT",
+        "description": "Подключение к серверу распознавания речи Whisper.cpp / совместимому с OpenAI API.",
+        "data": {
+          "server_url": "URL сервера",
+          "api_key": "API-ключ (опционально)",
+          "language": "Язык",
+          "model": "Модель",
+          "prompt": "Промпт (опционально)",
+          "temperature": "Температура"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Неверный URL: он должен начинаться с http:// или https://",
+      "cannot_connect": "Не удалось подключиться к серверу. Проверьте URL и что сервер запущен."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Whisper.cpp API STT",
+        "description": "Изменение настроек сервера распознавания речи Whisper.cpp / совместимого с OpenAI API.",
+        "data": {
+          "server_url": "URL сервера",
+          "api_key": "API-ключ (опционально)",
+          "language": "Язык",
+          "model": "Модель",
+          "prompt": "Промпт (опционально)",
+          "temperature": "Температура"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Неверный URL: он должен начинаться с http:// или https://",
+      "cannot_connect": "Не удалось подключиться к серверу. Проверьте URL и что сервер запущен."
+    }
+  }
+}

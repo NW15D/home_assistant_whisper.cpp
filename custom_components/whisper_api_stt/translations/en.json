@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Whisper.cpp API STT",
+        "description": "Connect to your Whisper.cpp / OpenAI-compatible transcription server.",
+        "data": {
+          "server_url": "Server URL",
+          "api_key": "API key (optional)",
+          "language": "Language",
+          "model": "Model",
+          "prompt": "Prompt (optional)",
+          "temperature": "Temperature"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Invalid URL: it must start with http:// or https://",
+      "cannot_connect": "Cannot connect to the server. Check the URL and that the server is running."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Whisper.cpp API STT",
+        "description": "Update your Whisper.cpp / OpenAI-compatible transcription server settings.",
+        "data": {
+          "server_url": "Server URL",
+          "api_key": "API key (optional)",
+          "language": "Language",
+          "model": "Model",
+          "prompt": "Prompt (optional)",
+          "temperature": "Temperature"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Invalid URL: it must start with http:// or https://",
+      "cannot_connect": "Cannot connect to the server. Check the URL and that the server is running."
+    }
+  }
+}

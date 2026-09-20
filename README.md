@@ -21,24 +21,25 @@ cmake --build build --config Release
 
 ### Configuration:
 
-Add to your `configuration.yaml`:
+Configuration is done in the UI (YAML is no longer supported):
 
-```yaml
-stt:
-  - platform: whisper_api_stt
-    server_url: "http://192.168.0.55:5045/v1/audio/transcriptions"
-    model: "whisper-1"
-    language: "ru-RU"
-    temperature: 0.0
-```
+1. Install via HACS (or copy `custom_components/whisper_api_stt` to your config directory) and restart Home Assistant.
+2. **Settings → Devices & services → Add integration → Whisper.cpp API**.
+3. Fill in the form. Settings can be changed later via the integration's **Configure** button; the entry reloads automatically.
+
+You can add several entries (e.g. different languages or servers).
+
+> Upgrading from the YAML version: remove the `stt: - platform: whisper_api_stt` block from `configuration.yaml`, restart, and add the integration through the UI.
 
 #### Parameters:
-- `server_url` (Optional): URL of your whisper.cpp or OpenAI-compatible server. Defaults to OpenAI API.
-- `api_key` (Optional): API key if required by your server.
-- `model` (Optional): Model name. Defaults to `whisper-1`.
-- `language` (Optional): Language code (e.g., `en-US`, `ru-RU`).
-- `temperature` (Optional): Sampling temperature between 0 and 1. Defaults to `0.0`.
-- `prompt` (Optional): Optional text to guide the model's style.
+- `Server URL`: full URL of your whisper.cpp or OpenAI-compatible endpoint, e.g. `http://192.168.0.55:5045/v1/audio/transcriptions`.
+- `API key` (optional): API key if required by your server.
+- `Model`: model name. Defaults to `whisper-1` (whisper.cpp server ignores it).
+- `Language`: language code (e.g., `en-US`, `ru-RU`).
+- `Prompt` (optional): text to guide the model's style.
+- `Temperature`: sampling temperature between 0 and 1. Defaults to `0.0`.
+
+The form checks that the server is reachable before saving.
 
 ### Notes:
 - The integration converts the language code to ISO-639-1 (e.g., `ru-RU` -> `ru`) for API compatibility.
